@@ -1,0 +1,7 @@
+{
+  "name": "EfficMac",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

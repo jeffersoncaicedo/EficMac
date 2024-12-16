@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'torsion-page',
+    loadChildren: () => import('./torsion-page/torsion-page.module').then( m => m.TorsionPagePageModule)
+  },
 ];
 
 @NgModule({

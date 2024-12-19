@@ -35,7 +35,7 @@
 }
 
 .title{
-  margin-left: 1%;
+  margin-left: 0.5%;
 }
 
 .ion-pad-content{
@@ -66,15 +66,11 @@
   justify-content: center;
 }
 
-.name, .menu-txt, .label-txt, .title-txt, .menu-icon{
-  color: #002c2b;
-}
+// .name, .menu-txt, .label-txt, .title-txt, .menu-icon{
+//   // color: #002c2b;
+// }
 
 .footer-txt{
   font-size: small;
-  color: #002c2b;
-}
-
-ion-page{
-  background-color: #0a873F !important;
+  // color: #002c2b;
 }

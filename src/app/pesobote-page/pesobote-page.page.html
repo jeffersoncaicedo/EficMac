@@ -3,7 +3,7 @@
     <ion-icon slot="icon-only" md="arrow-back-outline"></ion-icon>
   </ion-button>
   <ion-toolbar>
-    <ion-title>Cálculo de Torsiones</ion-title>
+    <ion-title>Descargue de Máquina</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,16 +11,12 @@
   <div class="input-container">
     <div class="input-user">
       <ion-item>
-        <ion-input (ionChange)="InputAlfaChange($event)" label="Ingresa el valor alfa" placeholder="4" labelPlacement="floating" #alfa_inpt></ion-input>
+        <ion-input (ionChange)="InputMetrosChange($event)" label="Ingresa el valor de los metros" placeholder="2000" labelPlacement="floating" #metros_inpt></ion-input>
       </ion-item>
       <ion-item>
-        <ion-input (ionChange)="InputNmChange($event)" label="Ingresa el valor de Nm" placeholder="16" labelPlacement="floating" #nm_inpt></ion-input>
+        <ion-input (ionChange)="InputNmChange($event)" label="Ingresa el valor de Nm" placeholder="0.0945" labelPlacement="floating" #nm_inpt></ion-input>
       </ion-item>
     </div>  
-  </div>
-  <div class="value-container">
-    Valor constante
-    <ion-text><i><strong>30.3</strong></i></ion-text>
   </div>
   <div class="btn-container">
     <ion-button id="calc_btn" shape="round" color="dark" (click)="CalcTor()">Calcular</ion-button>
@@ -28,7 +24,7 @@
 
   <ion-alert
   trigger="calc_btn"
-  header="El resultado es: {{torsiones}}"
+  header="El resultado es: {{peso_bote}}"
   [buttons]="alertButtons"
   ></ion-alert>
 

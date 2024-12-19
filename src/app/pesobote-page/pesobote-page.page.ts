@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-torsion-page',
-  templateUrl: './torsion-page.page.html',
-  styleUrls: ['./torsion-page.page.scss'],
+  selector: 'app-pesobote-page',
+  templateUrl: './pesobote-page.page.html',
+  styleUrls: ['./pesobote-page.page.scss'],
 })
-export class TorsionPagePage implements OnInit { 
-  alfa: any;
+export class PesobotePagePage implements OnInit {
+  metros: any;
   nm: any;  
-  torsiones: any; 
+  peso_bote: any; 
 
   public alertButtons = [
     {
@@ -30,19 +30,19 @@ export class TorsionPagePage implements OnInit {
     this.router.navigate(['home']);
   }
 
-  InputAlfaChange(event:any){
-    this.alfa=event.target;
+  InputMetrosChange(event:any){
+    this.metros = event.target;
   }
 
   InputNmChange(event:any){
-    this.nm=event.target;
+    this.nm = event.target;
   }
 
   CalcTor(){
-    let sqr = Math.sqrt(this.nm.value);
-    this.torsiones = this.alfa.value * 30.3 * sqr;
-    this.alfa.value = "";
+    let div = this.metros.value / this.nm.value;
+    this.peso_bote = div / 1000;
+    
+    this.metros.value = "";
     this.nm.value = "";
   }
-
 }

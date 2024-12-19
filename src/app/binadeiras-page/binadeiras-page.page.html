@@ -1,0 +1,49 @@
+<ion-header [translucent]="true" class="toolbar">
+  <ion-button (click)="RetHome()" fill="clear" color="medium">
+    <ion-icon slot="icon-only" md="arrow-back-outline"></ion-icon>
+  </ion-button>
+  <ion-toolbar>
+    <ion-title>Cálculo de Kg/H</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="input-container">
+    <div class="input-user">
+      <ion-item>
+        <ion-input (ionChange)="InputHusosChange($event)" label="Ingresa el número de Husos" placeholder="40" labelPlacement="floating" #husos_inpt></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input (ionChange)="InputVelChange($event)" label="Ingresa la velocidad de entrega" placeholder="600" labelPlacement="floating" #vel_inpt></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input (ionChange)="InputElastanoChange($event)" label="Ingresa el valor de Elastano (Dennier)" placeholder="70" labelPlacement="floating" #elastano_inpt></ion-input>
+      </ion-item>
+    </div> 
+  </div>
+  <div class="input-container">
+    <div class="input-user">
+      <ion-item>
+        <ion-input (ionChange)="InputFilamentoChange($event)" label="Ingresa el valor de Filamento (Dennier)" placeholder="150" labelPlacement="floating" #filamento_inpt></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input (ionChange)="InputEstiroChange($event)" label="Ingresa el valor de Estiro" placeholder="2.8" labelPlacement="floating" #estiro_inpt></ion-input>
+      </ion-item>
+    </div> 
+  </div>
+  <div class="value-container">
+    Valor constante
+    <ion-text><i><strong>0.06</strong></i></ion-text>
+  </div>
+  <div class="btn-container">
+    <ion-button id="calc_btn" shape="round" color="dark" (click)="CalcTor()">Calcular</ion-button>
+  </div>
+
+  <ion-alert
+  trigger="calc_btn"
+  header="El resultado final es: {{khg_binadeiras}}"
+  message="El cálculo de Dennier es: {{dennier}} y el cálculo de Nm es: {{nm}}"
+  [buttons]="alertButtons"
+  ></ion-alert>
+
+</ion-content>

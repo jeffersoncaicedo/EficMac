@@ -7,13 +7,15 @@
 
 .input-container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     margin: 5%;
+    margin-top: 20%;
 }
 
 .input-user{
     display: flex;
+    flex-direction: column;
 }
 
 .value-container, .btn-container{
